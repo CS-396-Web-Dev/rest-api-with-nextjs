@@ -1,25 +1,22 @@
-'use client';
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 
-export default function RecipeStep({ id, step }) {
+export default function RecipeStep({ step }) {
   const [isDone, setIsDone] = useState(false);
+
   return (
-    <li key={id}>
+    <li>
       <label
         style={{
-          // TODO: Add styling conditional
-          textDecoration: isDone ? 'line-through' : 'none',
+          textDecoration: isDone ? "line-through" : "none",
         }}
       >
         {step}
       </label>
       <input
         type="checkbox"
-        // TODO: Update checked conditional
         checked={isDone}
         onChange={() => {
-          // TODO: add checked change handler
-          // and modify state
           setIsDone(!isDone);
         }}
       ></input>

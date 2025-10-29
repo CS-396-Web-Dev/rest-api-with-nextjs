@@ -1,12 +1,14 @@
-'use client';
+"use client";
 
-import { use, useState } from 'react';
-import { SubmitButton } from '../atoms';
-import { RecipeStepContext } from '../../contexts/recipe-step-context';
+import { use, useState } from "react";
+import { SubmitButton } from "../atoms";
+import { RecipeStepContext } from "../../contexts/recipe-step-context";
 
 export default function RecipeStepForm() {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const { recipeSteps, setRecipeSteps } = use(RecipeStepContext);
+
+  console.log("recipe", recipeSteps);
 
   return (
     <form
@@ -19,11 +21,11 @@ export default function RecipeStepForm() {
         // Add new recipe step to state
         setRecipeSteps({
           ...recipeSteps,
-          [id]: { value: input, isDone: false },
+          [id]: input,
         });
 
         // Clear input text
-        setInput('');
+        setInput("");
       }}
     >
       <fieldset>
