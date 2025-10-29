@@ -1,3 +1,8 @@
+sample curl command:
+```curl -X POST -H "Content-Type: application/json" -d '{"value": "curl step"}' http://localhost:3000/api/recipe-steps```
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
